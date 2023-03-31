@@ -7,7 +7,8 @@ function solve() {
             let rowNums = [];
             for (const row of rows) {
                 let rowche = [];
-                for (const child of row.children) {
+                let rch = Array.from(row.children);
+                for (const child of rch) {
                     rowche.push(Number(child.firstElementChild.value))
                 }
                 rowNums.push([...rowche]);
@@ -49,7 +50,8 @@ function solve() {
     });
     document.querySelectorAll('button')[1].addEventListener('click', ()=> {
         for (let row of rows) {
-            for (let td of row.children) {
+            let rch = Array.from(row.children);
+            for (let td of rch) {
                 td.firstElementChild.value = '';
             }
         }
@@ -74,7 +76,8 @@ function solve() {
             }
         }
         for (const row of rows) {
-            for (const td of row.children) {
+            let rch = Array.from(row.children);
+            for (const td of rch) {
                 if(td.firstElementChild.value === ''){
                     return true;
                 }

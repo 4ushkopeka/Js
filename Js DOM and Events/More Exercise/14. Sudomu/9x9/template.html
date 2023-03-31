@@ -145,7 +145,8 @@
             let rowNums = [];
             for (const row of rows) {
                 let rowche = [];
-                for (const child of row.children) {
+				let rch = Array.from(row.children);
+                for (const child of rch) {
                     rowche.push(Number(child.firstElementChild.value))
                 }
                 rowNums.push(rowche);
@@ -253,7 +254,8 @@
             }
         }
         for (const row of rows) {
-            for (const td of row.children) {
+			let rch = Array.from(row.children);
+            for (const td of rch) {
                 if(td.firstElementChild.value === ''){
                     return true;
                 }
