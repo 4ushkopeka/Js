@@ -24,7 +24,7 @@ function solve() {
         descriptionInput.value = '';
         titleInput.disabled = false;
         titleInput.value = '';
-        labelSelect.value = 'Feature';
+        labelSelect.value = '';
         labelSelect.disabled = false;
         assigneeInput.disabled = false;
         assigneeInput.value = '';
@@ -108,6 +108,7 @@ function solve() {
         titleInput.value = '';
         assigneeInput.value = '';
         pointsInput.value = '';
+        labelSelect.value = '';
 
             delBtn.textContent = 'Delete';
             actionDiv.appendChild(delBtn);
